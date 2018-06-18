@@ -1,0 +1,24 @@
+{
+  "name": "@agilatech/lynxari-snapshot-application",
+  "version": "0.8.0",
+  "description": "Lynxari Server App for downloading a webcam image from an external server",
+  "main": "loader.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://scott@209.200.216.6:22125/volume1/git_repos/lynxari-snapshot-application"
+  },
+  "keywords": [
+    "photo",
+    "webcam",
+    "image"
+  ],
+  "dependencies":{
+    "request": "*",
+    "solar-calc": "*"
+  },
+  "author": "scotty <scott@agilatech.com> (http://agilatech.com)",
+  "license": "SEE LICENSE IN LICENSE"
+}

@@ -1,0 +1,19 @@
+{
+  "sources":[
+    {
+      "name":"North Cam",
+      "url":"http://username:password@192.168.1.102/snapshot.jpg",
+      "destination":"/home/agt/webcam/latest.jpg",
+      "period":"5",
+      "light":{
+        "lat":42.949009,
+        "lon":-110.140349,
+        // ONLY include the next 4 config lines if a light sensor actually exists (delete this comment too)
+        "server":"agt1",
+        "sensor":"SI1145",
+        "property":"visible",
+        "lowlight":5 
+      }
+    }
+  ]
+}
