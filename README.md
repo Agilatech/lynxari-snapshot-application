@@ -24,7 +24,8 @@ A _config.json_ configuration file must be present in the module's main director
 The _config.json_ file defines an array of sources from which images will be captured. Each source contains the following:
 
 1. **name** : The name of the camera. This is only used for logging purposes.
-2. **url** : The full URL to the camera's still image. 
+2. **url** : The full URL to the camera's still image.
+3. **timeout** : The number of milliseconds to wait for the camera to respond to the image request. _optional_ Defaults to 3000 if not supplied.
 3. **destination** : A full path to the file where the image will be stored on the local file system.
 4. **period** : The number of minutes between image captures.
 5. **light** : An object defining the the minimum light necessary to capture the image. Further explanation...
@@ -37,7 +38,7 @@ The _config.json_ file defines an array of sources from which images will be cap
   5. **property** : The ambient light data property on the device.
   6. **lowlight** : The numerical value of the light property which is considered the lowlight cutoff.
 
-  Note that _either_ lat and lon _or_ light sensor should be defined. If all parameters of the light sensor are given it will be used, but any single one is missing then the sunrise/sunset will be used. If neither the light sensor or the earth position are properly defined, then the snapshot will be disabled for that camera source.
+  Note that _either_ lat and lon _or_ light sensor should be defined. If all parameters of the light sensor are given it will be used, but any single one is missing then the sunrise/sunset for the location will be used. If neither the light sensor or the earth position are properly defined, then the snapshot will be disabled for that camera source.
 
 There is no limit to the number of source objects which may appear in the **sources** array. The config.json file must be valid JSON.
 

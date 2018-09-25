@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://scott@209.200.216.6:22125/volume1/git_repos/lynxari-snapshot-application"
+    "url": "git+https://github.com/Agilatech/lynxari-snapshot-application"
   },
   "keywords": [
     "photo",

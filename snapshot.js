@@ -13,6 +13,7 @@ module.exports = class Snapshot {
 
     this.url = snap.url;
     this.destination = snap.destination;
+    this.timeout = snap.timeout || 3000;
 
     // fixme: enhance code so that period may be sec, min, day, week, etc.
     // right now, period is minutes, so multiply by 60 * 1000 to get milliseconds
@@ -108,10 +109,14 @@ module.exports = class Snapshot {
 
         // if we made it here, then go ahead and get a snapshot
         try {
-          request(self.url).pipe(fs.createWriteStream(self.destination));
+          request({url: self.url, timeout: self.timeout}, (err) => {
+            if (err) {
+              self.server.warn("Error connecting to " + self.url + " ERR: " + err.code);
+            }
+          }).pipe(fs.createWriteStream(self.destination));
         }
         catch (err) {
-          self.server.warn("Error connecting to: " + self.destination + " ERR: " + err);
+          self.server.warn("Error connecting to: " + self.url + " ERR: " + err);
         }
       }, this.period);
     }

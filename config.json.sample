@@ -3,6 +3,7 @@
     {
       "name":"North Cam",
       "url":"http://username:password@192.168.1.102/snapshot.jpg",
+      "timeout":2500,
       "destination":"/home/agt/webcam/latest.jpg",
       "period":"5",
       "light":{
