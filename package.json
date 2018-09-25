@@ -1,6 +1,6 @@
 {
   "name": "@agilatech/lynxari-snapshot-application",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "Lynxari Server App for downloading a webcam image from an external server",
   "main": "loader.js",
   "scripts": {
@@ -15,7 +15,7 @@
     "webcam",
     "image"
   ],
-  "dependencies":{
+  "dependencies": {
     "request": "*",
     "solar-calc": "*"
   },
